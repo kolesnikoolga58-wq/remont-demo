@@ -245,6 +245,16 @@
     .foot { transform: none; padding: var(--v-3) var(--v-gutter); gap: var(--v-1) var(--v-4); }
     .foot__more { display: none; }
   }
+  /* низкие окна и крупный шрифт: финал не должен наезжать на футер */
+  @media (min-width: 861px) and (max-height: 820px) {
+    .foot__more { display: none; }
+    .fin__copy { bottom: clamp(4.5rem, 11vh, 6rem); }
+    .fin__after .fin__copy .v-display { font-size: clamp(1.5rem, 5vh, 2.4rem); }
+    .fin__copy .v-lede { margin-top: var(--v-3); font-size: clamp(1rem, 2.4vh, 1.25rem); }
+    .fin__copy .v-btn { margin-top: var(--v-4); }
+    .fin__meta { margin-top: var(--v-3); }
+    .fin__tel { min-height: 36px; }
+  }
 </style>
 </head>
 <body>
